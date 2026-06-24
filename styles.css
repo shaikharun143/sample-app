@@ -1,0 +1,90 @@
+/* Root-level custom properties for theming */
+:root {
+  --primary-color: #2c3e50;
+  --accent-color: #3498db;
+  --bg-color: #f4f4f4;
+  --text-color: #333;
+  --transition-duration: 0.3s;
+}
+
+/* Base styles */
+body {
+  margin: 0;
+  font-family: sans-serif;
+  color: var(--text-color);
+  background: var(--bg-color);
+}
+header {
+  background: var(--primary-color);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+nav a {
+  color: white;
+  margin: 0 1rem;
+  text-decoration: none;
+}
+
+/* Hero section */
+#hero {
+  background: var(--accent-color);
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Features section */
+.features-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  padding: 1rem;
+}
+.feature-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  flex: 1 1 200px;
+  padding: 1rem;
+  transition: transform var(--transition-duration);
+}
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+/* CI/CD pipeline section */
+#pipeline {
+  padding: 2rem;
+  text-align: center;
+}
+#pipeline-diagram img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Footer */
+footer {
+  background: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Responsive grid example (optional) */
+/* Could use CSS grid for more complex layouts. */
+@media (max-width: 600px) {
+  .features-container {
+    flex-direction: column;
+  }
+}
+
+/* CSS Animations (for simple effects) */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn ease-in forwards;
+}
+@keyframes fadeIn {
+  to { opacity: 1; }
+}

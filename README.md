@@ -11,6 +11,9 @@ GitHub push ─▶ GitHub Actions ─▶ Docker Hub ─▶ EC2 (Docker)
               (test → build → deploy)
 ```
 
+<img width="1600" height="885" alt="image" src="https://github.com/user-attachments/assets/6c620173-086c-4911-8ad8-2efa606f355c" />
+
+
 | Stage | What it does |
 |-------|--------------|
 | **test** | Runs `pytest` so a broken commit never ships |
@@ -120,6 +123,9 @@ Open `http://<EC2-PUBLIC-IP>:5000` in a browser. Then clean up so the pipeline c
 docker rm -f sample-app
 ```
 
+<img width="443" height="182" alt="image" src="https://github.com/user-attachments/assets/0f71bd27-72b7-4344-9dfc-248b89193192" />
+
+
 ---
 
 ## GitHub Secrets
@@ -147,12 +153,19 @@ git add .
 git commit -m "Trigger pipeline"
 git push
 ```
+<img width="1349" height="605" alt="image" src="https://github.com/user-attachments/assets/71388902-f8a8-4eef-a4f6-833bf0a272f7" />
 
 Then:
 
 1. Open the repo's **Actions** tab and watch the three jobs turn green in sequence.
+
+<img width="1357" height="612" alt="image" src="https://github.com/user-attachments/assets/335d392c-b041-4ab9-9ea1-252317fcb3f0" />
+
+  
 2. Confirm the new image appears on **Docker Hub**.
 3. Visit `http://<EC2-PUBLIC-IP>:5000` — the new version is live, deployed automatically.
+
+<img width="1366" height="686" alt="image" src="https://github.com/user-attachments/assets/55b78027-55b5-49a9-a997-708686e05b0a" />
 
 ---
 
@@ -163,6 +176,6 @@ Then:
 
 ---
 
-## License
+<img width="1112" height="550" alt="image" src="https://github.com/user-attachments/assets/5ed2d49c-2519-4d65-812d-36fa3143e205" />
 
-MIT (or your choice).
+

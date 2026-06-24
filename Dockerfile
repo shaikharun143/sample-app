@@ -1,7 +1,18 @@
-FROM	python:3.12-slim
-WORKDIR	/app
-COPY	requirements.txt .
-RUN	pip	install	--no-cache-dir	-r	requirements.txt
-COPY	.	. 
-EXPOSE	5000 
-CMD	["python",	"app.py"]
+FROM python:3.12-slim
+
+WORKDIR /app
+
+# Copy requirements first (better Docker layer caching)
+COPY requirements.txt .
+
+# Install dependencies
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy project files
+COPY . .
+
+# Expose Flask port
+EXPOSE 5000
+
+# Run application
+CMD ["python", "app.py"]
